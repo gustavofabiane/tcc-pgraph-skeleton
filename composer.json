@@ -1,0 +1,39 @@
+{
+    "name": "gustavofabiane/skeleton-project",
+    "description": "The skeleton project for gustavofabiane/framework usage",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gustavo Fabiane",
+            "email": "gustavfabiane@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\Feature\\": "tests/Feature/",
+            "App\\Tests\\Unit\\": "tests/Unit/"
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "gustavofabiane/framework": "dev-master"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@bitbucket.org:gustavofabiane/framework.git"
+        }   
+    ],
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "discard-changes": true
+    }
+}

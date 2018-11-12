@@ -1,0 +1,8 @@
+# ignore composer vendor folder
+vendor/
+
+# ignore node.js modules folder
+node_modules/
+
+# ignore PHPUnit cache file
+.phpunit.result.cache
