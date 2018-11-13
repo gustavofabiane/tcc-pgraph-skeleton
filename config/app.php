@@ -45,7 +45,7 @@ return [
         '\App\Providers\RouterProvider',
 
         /**
-         * GraphQL compoenent provider.
+         * GraphQL component provider.
          */
         '\App\Providers\GraphQLProvider' => [
             'typeRegistry', 

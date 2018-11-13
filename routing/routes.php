@@ -8,9 +8,8 @@ use function Framework\Http\response;
 /*
 | Collect the application routes.
 | 
-| Current scope runs in router component 'collect' and 
-| '$this' references the application route collector instance.
-|
+| Current scope runs in router component 'collect' and '$this' 
+| references the application route collector instance.
 */
 /** 
  * @var \Framework\Router\RouteCollectorInterface $this
