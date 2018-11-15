@@ -1,5 +1,7 @@
 <?php
 
+require '../vendor/autoload.php';
+
 /**
  * @var \Framework\Core\Application $app
  */

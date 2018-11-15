@@ -1,7 +1,5 @@
 <?php
 
-require 'vendor/autoload.php';
-
 /**
  * Resolves the application root directory.
  * 
