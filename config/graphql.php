@@ -81,7 +81,7 @@ return [
      * @var callable
      */ 
     'error_formatter' => '\Framework\GraphQL\Error\BasicErrorHandler::formatError',
-    'errors_handler'   => '\Framework\GraphQL\Error\BasicErrorHandler::handleErrors',
+    'errors_handler'  => '\Framework\GraphQL\Error\BasicErrorHandler::handleErrors',
 
     /**
      * The GraphQL API security specifications. 
