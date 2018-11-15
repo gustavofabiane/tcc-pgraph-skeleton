@@ -30,9 +30,10 @@ $app = new Framework\Core\Application([], $configuration);
  * Updates the application configuration with its default required values.
  */
 $app['config']->update('app', [
-    'app_home'   => $baseDir,
+    'app_dir'    => $baseDir,
     'public_dir' => $baseDir . '/public',
-    'routes_dir' => $baseDir . '/routing'
+    'routes_dir' => $baseDir . '/routing',
+    'cache_dir'  => $baseDir . '/cache',
 ]);
 
 /**
