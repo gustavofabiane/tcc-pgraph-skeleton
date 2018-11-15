@@ -1,5 +1,6 @@
 # ignore composer vendor folder
 vendor/
+composer.lock
 
 # ignore node.js modules folder
 node_modules/
