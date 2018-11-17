@@ -34,6 +34,8 @@ $app['config']->update('app', [
     'public_dir' => $baseDir . '/public',
     'routes_dir' => $baseDir . '/routing',
     'cache_dir'  => $baseDir . '/cache',
+
+    'app_namespace' => 'App',
 ]);
 
 /**
