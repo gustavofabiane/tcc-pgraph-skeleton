@@ -1,5 +1,7 @@
 <?php
 
+$loader = require 'vendor/autoload.php';
+
 /**
  * Resolves the application root directory.
  * 
@@ -12,7 +14,7 @@ $baseDir = realpath(__DIR__);
  * 
  * @var Framework\Core\Configuration $configuration
  */
-$configuration = Framework\Core\Configuration::create([
+$configuration = Pgraph\Core\Configuration::create([
     'prefix' => 'config',
     'folder' => $baseDir . '/config/'
 ]);
@@ -22,7 +24,7 @@ $configuration = Framework\Core\Configuration::create([
  * 
  * @var Framework\Core\Application $app
  */
-$app = new Framework\Core\Application([], $configuration);
+$app = new Pgraph\Core\Application($configuration, [], true);
 
 /**
  * Updates the application configuration with its default required values.

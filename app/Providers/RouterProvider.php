@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use Framework\Core\Application;
-use Framework\Router\RouterProvider as Provider;
+use Pgraph\Core\Application;
+use Pgraph\Router\RouterProvider as Provider;
 
 class RouterProvider extends Provider
 {

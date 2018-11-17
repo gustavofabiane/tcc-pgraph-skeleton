@@ -8,7 +8,7 @@
         stopOnFailure="false"
         backupGlobals="false"
         colors="true"
-        bootstrap="./vendor/autoload.php">
+        bootstrap="./bootstrap.php">
     <testsuites>
         <testsuite name="Feature">
             <directory suffix="Test.php">./tests/Feature</directory>

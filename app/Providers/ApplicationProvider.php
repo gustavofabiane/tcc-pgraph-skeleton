@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use Framework\Core\Application;
-use Framework\Core\DefaultProvider;
+use Pgraph\Core\Application;
+use Pgraph\Core\DefaultProvider;
 
 class ApplicationProvider extends DefaultProvider
 {

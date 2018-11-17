@@ -2,12 +2,12 @@
 
 namespace Tests;
 
-use Framework\Http\Uri;
-use Framework\Http\Request;
-use Framework\Core\Application;
+use Pgraph\Http\Uri;
+use Pgraph\Http\Request;
+use Pgraph\Core\Application;
 use PHPUnit\Framework\TestCase as Test;
 use Psr\Http\Message\ResponseInterface;
-use Framework\Http\Stream;
+use Pgraph\Http\Stream;
 
 class TestCase extends Test
 {
@@ -26,7 +26,7 @@ class TestCase extends Test
      */
     public function app(): Application
     {
-        return $this->app ?: ($this->app = require __DIR__ . '/../bootstrap.php');
+        return $this->app ?: ($this->app = Application::getIntance());
     }
 
     /**

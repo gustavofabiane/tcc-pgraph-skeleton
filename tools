@@ -1,8 +1,16 @@
 #!/usr/bin/env php
 <?php
 
-require 'vendor/autoload.php';
-
+/**
+ * Initializes the core application.
+ */
 $app = require './bootstrap.php';
 
-$app->get('consoleApplication')->run();
+/**
+ * Executes the provided command using
+ * default input and output implementation.
+ *
+ * @var \Framework\Command\Application
+ */
+$commander = $app->get('commander');
+$commander->run();

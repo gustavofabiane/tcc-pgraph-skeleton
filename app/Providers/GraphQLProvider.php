@@ -2,8 +2,8 @@
 
 namespace App\Providers;
 
-use Framework\Core\Application;
-use Framework\GraphQL\GraphQLProvider as Provider;
+use Pgraph\Core\Application;
+use Pgraph\GraphQL\GraphQLProvider as Provider;
 
 class GraphQLProvider extends Provider
 {

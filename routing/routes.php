@@ -3,7 +3,7 @@
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
-use function Framework\Http\response;
+use function Pgraph\Http\response;
 
 /*
 | Collect the application routes.
