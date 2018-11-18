@@ -12,5 +12,5 @@ $app = require './bootstrap.php';
  *
  * @var \Framework\Command\Application
  */
-$commander = $app->get('commander');
+$commander = $app->get('console');
 $commander->run();

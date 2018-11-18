@@ -38,6 +38,11 @@ return [
          * Default application provider.
          */
         '\App\Providers\ApplicationProvider',
+
+        /**
+         * Console commands provider.
+         */
+        '\App\Providers\CommandProvider',
         
         /**
          * Router component provider.

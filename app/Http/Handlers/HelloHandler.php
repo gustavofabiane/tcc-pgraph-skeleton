@@ -12,7 +12,7 @@ class HelloHandler implements RequestHandlerInterface
 {
     protected $router;
 
-    public function __construct(\Framework\Router\RouterInterface $router)
+    public function __construct(RouterInterface $router)
     {
         $this->router = $router;
     }
