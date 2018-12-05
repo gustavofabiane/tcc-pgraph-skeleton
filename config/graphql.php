@@ -1,5 +1,7 @@
 <?php
 
+use GraphQL\Error\Debug;
+
 /**
  * GraphQL API component configuration.
  */

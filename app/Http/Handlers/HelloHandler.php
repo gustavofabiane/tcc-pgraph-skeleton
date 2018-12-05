@@ -2,23 +2,35 @@
 
 namespace App\Http\Handlers;
 
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Server\RequestHandlerInterface;
+use Psr\Http\Message\ResponseInterface as Response;
+use Psr\Http\Message\ServerRequestInterface as Request;
 
-use function Framework\Http\response;
+use function Pgraph\Http\response;
 
+/**
+ * HelloHandler
+ * 
+ * HTTP Handler implementation.
+ */
 class HelloHandler implements RequestHandlerInterface
 {
-    protected $router;
-
-    public function __construct(RouterInterface $router)
+    /**
+     * Create a new HelloHandler instance.
+     */
+    public function __construct()
     {
-        $this->router = $router;
-    }
+        ///
+    } 
 
-    public function handle(ServerRequestInterface $request): ResponseInterface
+    /**
+     * Handle an incomming HTTP request.
+     * 
+     * @param Request $request
+     * @return Response
+     */
+    public function handle(Request $request): Response
     {
-        return response(200, 'Hello with handler, ' . $request->getAttribute('name') . '! <pre>' . print_r($this->router, true));
+        return response('Hello!');
     }
 }
