@@ -1,0 +1,54 @@
+
+scalar Email;
+scalar Date;
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Query {
+    posts(page: Int): [Post]!
+    search(q: String, page: Int): SearchResult
+    authors: [Author]!
+}
+
+type Mutation {
+    createAuthor(name: String!, email: Email!, password: String!): Author
+    createTextPost(title: String!, content: String!, authorId: ID!): Text
+    createImagePost(title: String!, url: String!, authorId: ID!): Image
+    addComment(postId: ID!, content: String!, email: Email!): Comment
+    replyComment(commentId: ID!, content: String!, email: Email): Comment
+}
+
+union SearchResult = Post | Author | Comment
+
+interface Post {
+    id: ID!
+    title: String!
+    author: Author!
+    createdAt: Date
+}
+
+type Text implements Post {
+    content: String!
+}
+
+type Image implements Post {
+    url: String!
+}
+
+type Author {
+    id: ID!
+    name: String!
+    email: Email!
+    posts: [Post]!
+}
+
+type Comment {
+    id: ID!
+    email: Email!
+    content: String!
+    post: Post!
+    replies: [Comment]!
+}

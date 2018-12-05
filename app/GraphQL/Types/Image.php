@@ -34,8 +34,17 @@ class Image extends ObjectType
     public function fields(): array
     {
         return [
-            'id' => $this->registry->id()
+            'id'        => nonNull('id'),
+            'title'     => nonNull('string'),
+            'author'    => nonNull('author'),
+            'url'       => nonNull('string'),
+            'createdAt' => type('datetime')
         ];
+    }
+
+    public function getAuthorField($obj)
+    {
+        return $obj->author;
     }
 
     /**

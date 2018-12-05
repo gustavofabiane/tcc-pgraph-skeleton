@@ -60,7 +60,9 @@ return [
      * assumes the same behavior of the schema query.
      */
     'mutation' => [
-        'createAuthor' => '\App\GraphQL\Mutations\CreateAuthor',
+        'createAuthor'    => '\App\GraphQL\Mutations\CreateAuthor',
+        'createTextPost'  => '\App\GraphQL\Mutations\CreateTextPost',
+        'createImagePost' => '\App\GraphQL\Mutations\CreateImagePost',
     ],
     
     /**
@@ -73,7 +75,7 @@ return [
          * Register your schema output types here.
          */
         '\App\GraphQL\Types\Author',
-        
+
         '\App\GraphQL\Types\Post',
         '\App\GraphQL\Types\Text',
         '\App\GraphQL\Types\Image',
@@ -83,7 +85,7 @@ return [
          * Register your custom scalar types here.
          */
         '\App\GraphQL\Types\Email',
-        '\App\GraphQL\Types\Date',
+        '\App\GraphQL\Types\DateTime',
         
         /**
          * Input Types

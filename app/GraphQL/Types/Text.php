@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace App\GraphQL\Types;
 
+use RedBeanPHP\R;
 use Pgraph\GraphQL\ObjectType;
-use GraphQL\Type\Definition\ResolveInfo;
 
 use function Pgraph\GraphQL\type;
 use function Pgraph\GraphQL\listOf;
 use function Pgraph\GraphQL\nonNull;
 use function Pgraph\GraphQL\argument;
+use GraphQL\Type\Definition\ResolveInfo;
 
 /**
  * Text type definition.
@@ -34,8 +35,17 @@ class Text extends ObjectType
     public function fields(): array
     {
         return [
-            'id' => $this->registry->id()
+            'id'        => nonNull('id'),
+            'title'     => nonNull('string'),
+            'author'    => nonNull('author'),
+            'content'   => nonNull('string'),
+            'createdAt' => type('datetime')
         ];
+    }
+
+    public function getAuthorField($obj)
+    {
+        return $obj->author;
     }
 
     /**

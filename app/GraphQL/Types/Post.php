@@ -37,7 +37,7 @@ class Post extends InterfaceType
             'id'        => nonNull('id'),
             'title'     => nonNull('string'),
             'author'    => nonNull('author'),
-            'createdAt' => type('date')
+            'createdAt' => $this->registry->type('datetime')
         ];
     }
 

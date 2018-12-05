@@ -14,7 +14,7 @@ use GraphQL\Language\AST\StringValueNode;
  *
  * Representation of the GraphQL scalar type.
  */
-class Date extends ScalarType
+class DateTime extends ScalarType
 {
     /**
      * Serializes an internal value to include in a response.
