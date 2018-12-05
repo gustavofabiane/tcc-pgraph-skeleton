@@ -21,6 +21,7 @@
     },
     "require": {
         "php": ">=7.2",
+        "gabordemooij/redbean": "^5.2",
         "gustavofabiane/framework": "dev-master"
     },
     "require-dev": {

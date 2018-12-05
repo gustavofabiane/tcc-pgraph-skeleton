@@ -1,0 +1,52 @@
+<?php
+
+declare(strict_types=1);
+
+namespace App\GraphQL\Types;
+
+use Pgraph\GraphQL\ObjectType;
+use GraphQL\Type\Definition\ResolveInfo;
+
+use function Pgraph\GraphQL\type;
+use function Pgraph\GraphQL\listOf;
+use function Pgraph\GraphQL\nonNull;
+use function Pgraph\GraphQL\argument;
+
+/**
+ * Text type definition.
+ * 
+ * Representation of the GraphQL object type.
+ */
+class Text extends ObjectType
+{
+    /**
+     * Describes the type.
+     *
+     * @var string       
+     */
+    public $description = 'About Text type';
+
+    /**
+     * The type fields.
+     *
+     * @return array of FieldDefinition
+     */
+    public function fields(): array
+    {
+        return [
+            'id' => $this->registry->id()
+        ];
+    }
+
+    /**
+     * Interfaces implemented by this type.
+     *
+     * @return array of InterfaceType
+     */
+    public function implements(): array
+    {
+        return [
+            $this->registry->type('post')       
+        ];
+    }
+}

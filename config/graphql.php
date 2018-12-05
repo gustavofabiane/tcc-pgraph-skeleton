@@ -1,5 +1,7 @@
 <?php
 
+use GraphQL\Error\Debug;
+
 /**
  * GraphQL API component configuration.
  */
@@ -50,7 +52,7 @@ return [
      * is the resolving type.
      */
     'query' => [
-
+        'authors' => '\App\GraphQL\Queries\Authors',
     ],
     
     /**
@@ -58,7 +60,7 @@ return [
      * assumes the same behavior of the schema query.
      */
     'mutation' => [
-
+        'createAuthor' => '\App\GraphQL\Mutations\CreateAuthor',
     ],
     
     /**
@@ -70,13 +72,18 @@ return [
          * Output Types
          * Register your schema output types here.
          */
-        // 'UserDefinedType',
+        '\App\GraphQL\Types\Author',
+        
+        '\App\GraphQL\Types\Post',
+        '\App\GraphQL\Types\Text',
+        '\App\GraphQL\Types\Image',
 
         /**
          * Scalars
          * Register your custom scalar types here.
          */
-        // 'CustomScalarType',
+        '\App\GraphQL\Types\Email',
+        '\App\GraphQL\Types\Date',
         
         /**
          * Input Types
