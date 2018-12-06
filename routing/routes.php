@@ -15,8 +15,7 @@ use function Pgraph\Http\response;
  * @var \Framework\Router\RouteCollectorInterface $this
  */
 
-$this->get('/hello/{name}', function (string $name): Response {
-    return response(200, 'Hello, ' . $name . '!');
-});
+$this->get('/hello-world', '\App\Http\Handlers\HelloWorldHandler')
+     ->add('\App\Http\Middleware\CoolMiddleware');
 
-$this->get('/hello-handler/{name}', 'App\Http\Handlers\HelloHandler');
+

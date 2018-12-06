@@ -57,18 +57,15 @@ class CreateAuthor extends Mutation
      * 
      * @param mixed $root
      * @param array $args
-     * @param mixed $context
-     * @param ResolveInfo $info
      * @return mixed
      */
-    public function resolve($root, array $args = [], $context = null, ResolveInfo $info = null)
+    public function resolve($root, array $args = [])
     {
         $author = R::dispense('author');
         $author->name = $args['name'];
         $author->email = $args['email'];
         $author->password = password_hash($args['password'], PASSWORD_BCRYPT);
         R::store($author);
-
         return $author;
     }
 }
