@@ -22,7 +22,7 @@ class ApplicationProvider extends DefaultProvider
          * Setup Redbean PHP connection
          */
         $dbConfig = $app->config->get('app', 'database');
-        R::setup($dbConfig['dsn'], $dbConfig['user'], $dbConfig['password']);
+        R::setup($dbConfig['dsn'], $dbConfig['user'], $dbConfig['pass']);
 
         //-----------------------------------
         parent::provide($app);
